@@ -9,7 +9,7 @@
       changed_when: false
 
   roles:
-    - role: iancleary.template
+    - role: iancleary.nodejs
       nodejs_npm_global_packages:
         - name: "yarn"
         - name: "@vue/cli"
