@@ -7,6 +7,9 @@
       apt: update_cache=yes cache_valid_time=600
       when: ansible_os_family == 'Debian'
       changed_when: false
+    - name: Setup nodejs_install_user to not rely on `runner` USER env var
+      set_fact:
+      nodejs_install_user: "root"
 
   roles:
     - role: iancleary.nodejs
