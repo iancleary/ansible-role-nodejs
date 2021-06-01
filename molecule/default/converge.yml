@@ -8,10 +8,9 @@
       when: ansible_os_family == 'Debian'
       changed_when: false
 
-    - name: Set defaults for testing only
-      set_fact:
-        variables: if_needed_only
-
   roles:
     - role: iancleary.template
-      variable: add_them_here
+      nodejs_npm_global_packages:
+        - name: "yarn"
+        - name: "@vue/cli"
+        - name: "markdownlint-cli"
