@@ -16,6 +16,7 @@
     path: "{{ npm_config_prefix }}"
     owner: "{{ nodejs_install_user }}"
     group: "{{ nodejs_install_user }}"
+    mode: '0644'
     state: directory
 
 - name: Add npm_config_prefix bin directory to global $PATH.
@@ -23,7 +24,7 @@
   ansible.builtin.template:
     src: npm.sh.j2
     dest: /etc/profile.d/npm.sh
-    mode: 0644
+    mode: '0644'
 
 - name: Reload Path for npm.sh
   become: true
