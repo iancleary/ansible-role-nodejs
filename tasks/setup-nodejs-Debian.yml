@@ -1,7 +1,7 @@
 ---
 - name: Nodejs - Ensure dependencies are present.
   become: true
-  apt:
+  ansible.builtin.apt:
     name:
       - apt-transport-https
       - gnupg2
@@ -9,7 +9,7 @@
 
 - name: Nodejs - Add Nodesource apt key.
   become: true
-  apt_key:
+  ansible.builtin.apt_key:
     url: >
       https://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0x1655A0AB68576280
     id: "68576280"
@@ -31,13 +31,13 @@
 
 - name: Nodejs - Update apt cache if repo was added.
   become: true
-  apt:
+  ansible.builtin.apt:
     update_cache: "yes"
   when: node_repo.changed
   tags: ['skip_ansible_lint']
 
 - name: Nodejs - Ensure Node.js is installed.
   become: true
-  apt:
+  ansible.builtin.apt:
     name: "nodejs={{ nodejs_version|regex_replace('x', '') }}*"
     state: present
