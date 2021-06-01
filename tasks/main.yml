@@ -44,5 +44,3 @@
     NPM_CONFIG_UNSAFE_PERM: "{{ npm_config_unsafe_perm }}"
   loop: "{{ nodejs_npm_global_packages }}"
   tags: ['skip_ansible_lint']
-
-
