@@ -40,7 +40,28 @@ A description of the settable variables for this role should go here, including 
 
 ```yaml
 ---
-add variables here
+# Set the version of Node.js to install (8.x", "10.x", "12.x", "13.x", etc.).
+# Version numbers from Nodesource: https://github.com/nodesource/distributions
+nodejs_version: "14.x"
+
+# The directory for global installations.
+npm_config_prefix: "/usr/local/lib/npm"
+
+# Set to true to suppress the UID/GID switching when running package scripts. If
+# set explicitly to false, then installing as a non-root user will fail.
+npm_config_unsafe_perm: "false"
+
+# Define a list of global packages to be installed with NPM.
+# nodejs_npm_global_packages: []
+#  # Install a specific version of a package.
+#  - name: jslint
+#    version: 0.9.3
+#  # Install the latest stable release of a package.
+#  - name: node-sass
+#  # This shorthand syntax also works (same as previous example).
+#  - node-sass
+
+nodejs_npm_global_packages: []
 ```
 
 Dependencies
@@ -59,7 +80,14 @@ Including an example of how to use your role (for instance, with variables passe
 - hosts: servers
   roles:
     - role: iancleary.nodejs
-      variable: add_them_here
+      nodejs_npm_global_packages:
+        # Install a specific version of a package.
+        - name: jslint
+        version: 0.9.3
+        # Install the latest stable release of a package.
+        - name: node-sass
+        # This shorthand syntax also works (same as previous example).
+        - node-sass
 ```
 
 License
@@ -72,4 +100,4 @@ Author Information
 
 This role was created in 2021 by [Ian Cleary](https://blog.iancleary.me).
 
-Inspiration for the structure of this repo came from [Jeff Geerling](https://github.com/geerlingguy/ansible-role-nginx).
+Inspiration for the structure of this repo came from [Jeff Geerling](https://github.com/geerlingguy/ansible-role-nodejs).
