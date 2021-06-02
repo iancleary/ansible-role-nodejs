@@ -64,6 +64,15 @@ npm_config_unsafe_perm: "false"
 nodejs_npm_global_packages: []
 ```
 
+Additionally, one can define the user and group for the `npm_config_prefix` directory.  
+
+The default is for them to be undefined, upon which they both  default to the `USER` environment variable.
+
+```yaml
+nodejs_install_npm_user: 'user1'
+nodejs_install_npm_group: 'group1'
+```
+
 Dependencies
 ------------
 
