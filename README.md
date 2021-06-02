@@ -1,24 +1,24 @@
-ansible-role-template
+ansible-role-nodejs
 =========
 
 <p align="center">
 
-<a href="https://github.com/iancleary/ansible-role-template/actions?query=workflow%3Aci" target="_blank">
-    <img src="https://github.com/iancleary/ansible-role-template/workflows/CI/badge.svg" alt="CI workflow status">
+<a href="https://github.com/iancleary/ansible-role-nodejs/actions?query=workflow%3Aci" target="_blank">
+    <img src="https://github.com/iancleary/ansible-role-nodejs/workflows/CI/badge.svg" alt="CI workflow status">
 </a>
 
-<a href="https://github.com/iancleary/ansible-role-template/actions?query=workflow%3Arelease" target="_blank">
-    <img src="https://github.com/iancleary/ansible-role-template/workflows/Release/badge.svg" alt="Release workflow status">
+<a href="https://github.com/iancleary/ansible-role-nodejs/actions?query=workflow%3Arelease" target="_blank">
+    <img src="https://github.com/iancleary/ansible-role-nodejs/workflows/Release/badge.svg" alt="Release workflow status">
 </a>
-<a href="https://galaxy.ansible.com/iancleary/template" target="_blank">
-    <img src="https://img.shields.io/badge/ansible--galaxy-iancleary.template-blue.svg" alt="Ansible Galaxy">
+<a href="https://galaxy.ansible.com/iancleary/nodejs" target="_blank">
+    <img src="https://img.shields.io/badge/ansible--galaxy-iancleary.nodejs-blue.svg" alt="Ansible Galaxy">
 </a>
-<a href="https://raw.githubusercontent.com/iancleary/ansible-role-template/main/LICENSE" target="_blank">
+<a href="https://raw.githubusercontent.com/iancleary/ansible-role-nodejs/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
 </a>
 </p>
 
-This role installs `add description here`.
+This role installs nodejs and npm.
 
 Requirements
 ------------
@@ -29,7 +29,6 @@ Supported and Tested `ansible_os_families`:
 
 * Ubuntu 18.04
 * Ubuntu 20.04
-* Fedora 34
 
 > Pull Requests welcome!
 
@@ -40,7 +39,37 @@ A description of the settable variables for this role should go here, including 
 
 ```yaml
 ---
-add variables here
+# Set the version of Node.js to install (8.x", "10.x", "12.x", "13.x", etc.).
+# Version numbers from Nodesource: https://github.com/nodesource/distributions
+nodejs_version: "14.x"
+
+# The directory for global installations.
+npm_config_prefix: "/usr/local/lib/npm"
+
+# Set to true to suppress the UID/GID switching when running package scripts. If
+# set explicitly to false, then installing as a non-root user will fail.
+npm_config_unsafe_perm: "false"
+
+# Define a list of global packages to be installed with NPM.
+# nodejs_npm_global_packages: []
+#  # Install a specific version of a package.
+#  - name: jslint
+#    version: 0.9.3
+#  # Install the latest stable release of a package.
+#  - name: node-sass
+#  # This shorthand syntax also works (same as previous example).
+#  - node-sass
+
+nodejs_npm_global_packages: []
+```
+
+Additionally, one can define the user and group for the `npm_config_prefix` directory.  
+
+The default is for them to be undefined, upon which they both  default to the `USER` environment variable.
+
+```yaml
+nodejs_install_npm_user: 'user1'
+nodejs_install_npm_group: 'group1'
 ```
 
 Dependencies
@@ -58,8 +87,15 @@ Including an example of how to use your role (for instance, with variables passe
 ```yaml
 - hosts: servers
   roles:
-    - role: iancleary.template
-      variable: add_them_here
+    - role: iancleary.nodejs
+      nodejs_npm_global_packages:
+        # Install a specific version of a package.
+        - name: jslint
+        version: 0.9.3
+        # Install the latest stable release of a package.
+        - name: node-sass
+        # This shorthand syntax also works (same as previous example).
+        - node-sass
 ```
 
 License
@@ -72,4 +108,4 @@ Author Information
 
 This role was created in 2021 by [Ian Cleary](https://blog.iancleary.me).
 
-Inspiration for the structure of this repo came from [Jeff Geerling](https://github.com/geerlingguy/ansible-role-nginx).
+Inspiration for the structure of this repo came from [Jeff Geerling](https://github.com/geerlingguy/ansible-role-nodejs).
