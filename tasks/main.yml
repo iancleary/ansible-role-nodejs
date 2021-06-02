@@ -31,11 +31,6 @@
     dest: /etc/profile.d/npm.sh
     mode: '0644'
 
-- name: Reload Path for npm.sh
-  become: true
-  ansible.builtin.command: "source /etc/profile.d/npm.sh"
-  changed_when: false
-
 - name: Install NPM global packages
   become: true
   community.general.npm:
