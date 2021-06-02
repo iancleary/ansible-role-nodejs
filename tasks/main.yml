@@ -33,7 +33,7 @@
 
 - name: Reload Path for npm.sh
   become: true
-  ansible.builtin.command: ". /etc/profile"
+  ansible.builtin.command: "source /etc/profile.d/npm.sh"
   changed_when: false
 
 - name: Install NPM global packages

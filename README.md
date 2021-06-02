@@ -18,7 +18,7 @@ ansible-role-nodejs
 </a>
 </p>
 
-This role installs `add description here`.
+This role installs nodejs and npm.
 
 Requirements
 ------------
@@ -29,7 +29,6 @@ Supported and Tested `ansible_os_families`:
 
 * Ubuntu 18.04
 * Ubuntu 20.04
-* Fedora 34
 
 > Pull Requests welcome!
 
