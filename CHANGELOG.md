@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Initial role! 🚀
+- Idempotence for NPM global package installation
 
 [Unreleased]: https://github.com/iancleary/ansible-role-nodejs/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v0.1.0
