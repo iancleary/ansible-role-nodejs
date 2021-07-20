@@ -18,7 +18,7 @@
 - name: Create npm global directory
   become: true
   ansible.builtin.file:
-    path: "{{ npm_config_prefix }}"
+    path: "{{ npm_config_prefix }}/lib/node_modules"
     owner: "{{ nodejs_install_npm_user }}"
     group: "{{ nodejs_install_npm_group }}"
     mode: '0644'
@@ -34,7 +34,7 @@
 - name: Find NPM global packages
   become: true
   changed_when: false
-  ansible.builtin.shell:
+  ansible.builtin.command:
     cmd: "ls {{ npm_config_prefix }}/lib/node_modules"
   register: installed_nodejs_npm_global_packages
 
