@@ -55,5 +55,5 @@
     NODE_PATH: "{{ npm_config_prefix }}/lib/node_modules"
     NPM_CONFIG_UNSAFE_PERM: "{{ npm_config_unsafe_perm }}"
   loop: "{{ nodejs_npm_global_packages }}"
-  when: item.name not in installed_nodejs_npm_global_packages.stdout_lines
+  when: "{{ item.name | default(item) }} not in installed_nodejs_npm_global_packages.stdout_lines"
   tags: ['skip_ansible_lint']
