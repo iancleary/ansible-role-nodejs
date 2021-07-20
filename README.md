@@ -57,8 +57,6 @@ npm_config_unsafe_perm: "false"
 #    version: 0.9.3
 #  # Install the latest stable release of a package.
 #  - name: node-sass
-#  # This shorthand syntax also works (same as previous example).
-#  - node-sass
 
 nodejs_npm_global_packages: []
 ```
@@ -94,8 +92,6 @@ Including an example of how to use your role (for instance, with variables passe
         version: 0.9.3
         # Install the latest stable release of a package.
         - name: node-sass
-        # This shorthand syntax also works (same as previous example).
-        - node-sass
 ```
 
 License
