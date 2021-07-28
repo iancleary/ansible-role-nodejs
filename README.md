@@ -58,7 +58,8 @@ npm_config_unsafe_perm: "false"
 #  # Install the latest stable release of a package.
 #  - name: node-sass
 
-nodejs_npm_global_packages: []
+nodejs_npm_global_packages:
+ - name: yarn
 ```
 
 Additionally, one can define the user and group for the `npm_config_prefix` directory.
