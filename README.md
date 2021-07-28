@@ -61,7 +61,7 @@ npm_config_unsafe_perm: "false"
 nodejs_npm_global_packages: []
 ```
 
-Additionally, one can define the user and group for the `npm_config_prefix` directory.  
+Additionally, one can define the user and group for the `npm_config_prefix` directory.
 
 The default is for them to be undefined, upon which they both  default to the `USER` environment variable.
 
@@ -89,7 +89,7 @@ Including an example of how to use your role (for instance, with variables passe
       nodejs_npm_global_packages:
         # Install a specific version of a package.
         - name: jslint
-        version: 0.9.3
+          version: 0.9.3
         # Install the latest stable release of a package.
         - name: node-sass
 ```
@@ -102,6 +102,6 @@ License
 Author Information
 ------------------
 
-This role was created in 2021 by [Ian Cleary](https://blog.iancleary.me).
+This role was created in 2021 by [Ian Cleary](https://iancleary.dev).
 
 Inspiration for the structure of this repo came from [Jeff Geerling](https://github.com/geerlingguy/ansible-role-nodejs).
