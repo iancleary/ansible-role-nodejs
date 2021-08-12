@@ -1,6 +1,6 @@
 ---
 - import_tasks: setup-nodejs-Debian.yml
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'elementary OS'
 
 - import_tasks: setup-nodejs-RedHat.yml
   when: ansible_os_family == 'RedHat'
