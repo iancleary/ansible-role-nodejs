@@ -43,7 +43,7 @@ A description of the settable variables for this role should go here, including 
 nodejs_version: "14.x"
 
 # The directory for global installations.
-npm_config_prefix: "/usr/local/lib/npm"
+npm_config_prefix: "/usr"
 
 # Set to true to suppress the UID/GID switching when running package scripts. If
 # set explicitly to false, then installing as a non-root user will fail.
@@ -88,6 +88,7 @@ Including an example of how to use your role (for instance, with variables passe
   roles:
     - role: iancleary.nodejs
       become: true
+      npm_config_unsafe_perm: "true"
       nodejs_npm_global_packages:
         # Install a specific version of a package.
         - name: jslint
