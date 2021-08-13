@@ -4,7 +4,7 @@
 nodejs_version: "14.x"
 
 # The directory for global installations.
-npm_config_prefix: "/usr/local/lib/npm"
+npm_config_prefix: "/usr"
 
 # Set to true to suppress the UID/GID switching when running package scripts. If
 # set explicitly to false, then installing as a non-root user will fail.
