@@ -2,18 +2,23 @@
 - import_tasks: setup-nodejs-Debian.yml
   when: ansible_os_family == 'Debian' or ansible_os_family == 'elementary OS'
 
-- import_tasks: setup-nodejs-RedHat.yml
-  when: ansible_os_family == 'RedHat'
-
 - name: Nodejs - Define nodejs_install_user
   ansible.builtin.set_fact:
     nodejs_install_npm_user: "{{ ansible_user | default(lookup('env', 'USER')) }}"
   when: nodejs_install_npm_user is not defined
 
+- name: Debug - display nodejs_install_user
+  debug:
+    msg: "{{ nodejs_install_npm_user }}"
+
 - name: Nodejs - Define nodejs_install_group
   ansible.builtin.set_fact:
     nodejs_install_npm_group: "{{ ansible_user | default(lookup('env', 'USER')) }}"
   when: nodejs_install_npm_group is not defined
+
+- name: Debug - display nodejs_install_npm_group
+  debug:
+    msg: "{{ nodejs_install_npm_group }}"
 
 - name: Create npm global directory
   become: true
@@ -21,7 +26,7 @@
     path: "{{ npm_config_prefix }}/lib/node_modules"
     owner: "{{ nodejs_install_npm_user }}"
     group: "{{ nodejs_install_npm_group }}"
-    mode: '0644'
+    mode: '0755'
     state: directory
 
 - name: Add npm_config_prefix bin directory to global $PATH.
@@ -41,7 +46,6 @@
 - name: Debug (list currently installed NPM global packages)
   ansible.builtin.debug:
     msg: "{{ installed_nodejs_npm_global_packages.stdout_lines }}"
-
 
 - name: Install NPM global packages
   become: true
