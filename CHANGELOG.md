@@ -7,10 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2021-08-12
+
 ### Added
 
 - elementary OS 6 support
 - use `0755` permission on npm global directory
+
+### Changed
+
+- use `root` user with `become: true`
 
 ## [0.1.1] - 2021-07-27
 
@@ -29,6 +35,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - NPM package shorthand to handle idempotence
 
-[Unreleased]: https://github.com/iancleary/ansible-role-nodejs/compare/v0.1.1...HEAD
-[0.1.0]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v0.1.1
+[Unreleased]: https://github.com/iancleary/ansible-role-nodejs/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v1.0.0
+[0.1.1]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v0.1.1
 [0.1.0]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v0.1.0
