@@ -84,6 +84,21 @@ Including an example of how to use your role (for instance, with variables passe
 
 ```yaml
 - hosts: servers
+  user: unprivelaged
+  roles:
+    - role: iancleary.nodejs
+      become: true
+      nodejs_npm_global_packages:
+        # Install a specific version of a package.
+        - name: jslint
+          version: 0.9.3
+        # Install the latest stable release of a package.
+        - name: node-sass
+```
+
+```yaml
+- hosts: servers
+  user: root
   roles:
     - role: iancleary.nodejs
       nodejs_npm_global_packages:
