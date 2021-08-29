@@ -3,17 +3,17 @@ ansible-role-nodejs
 
 <p align="center">
 
-<a href="https://github.com/iancleary/ansible-role-nodejs/actions?query=workflow%3Aci" target="_blank">
-    <img src="https://github.com/iancleary/ansible-role-nodejs/workflows/CI/badge.svg" alt="CI workflow status">
+<a href="https://github.com/icancclearynow/ansible-role-nodejs/actions?query=workflow%3Aci" target="_blank">
+    <img src="https://github.com/icancclearynow/ansible-role-nodejs/workflows/CI/badge.svg" alt="CI workflow status">
 </a>
 
-<a href="https://github.com/iancleary/ansible-role-nodejs/actions?query=workflow%3Arelease" target="_blank">
-    <img src="https://github.com/iancleary/ansible-role-nodejs/workflows/Release/badge.svg" alt="Release workflow status">
+<a href="https://github.com/icancclearynow/ansible-role-nodejs/actions?query=workflow%3Arelease" target="_blank">
+    <img src="https://github.com/icancclearynow/ansible-role-nodejs/workflows/Release/badge.svg" alt="Release workflow status">
 </a>
-<a href="https://galaxy.ansible.com/iancleary/nodejs" target="_blank">
+<a href="https://galaxy.ansible.com/icancclearynow/nodejs" target="_blank">
     <img src="https://img.shields.io/badge/ansible--galaxy-icancclearynow.nodejs-blue.svg" alt="Ansible Galaxy">
 </a>
-<a href="https://raw.githubusercontent.com/iancleary/ansible-role-nodejs/main/LICENSE" target="_blank">
+<a href="https://raw.githubusercontent.com/icancclearynow/ansible-role-nodejs/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
 </a>
 </p>
@@ -118,6 +118,6 @@ License
 Author Information
 ------------------
 
-This role was created in 2021 by [Ian Cleary](https://iancleary.dev).
+This role was created in 2021 by [Ian Cleary](https://icancclearynow.dev).
 
 Inspiration for the structure of this repo came from [Jeff Geerling](https://github.com/geerlingguy/ansible-role-nodejs).
