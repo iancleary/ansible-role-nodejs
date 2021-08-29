@@ -11,7 +11,7 @@ ansible-role-nodejs
     <img src="https://github.com/iancleary/ansible-role-nodejs/workflows/Release/badge.svg" alt="Release workflow status">
 </a>
 <a href="https://galaxy.ansible.com/iancleary/nodejs" target="_blank">
-    <img src="https://img.shields.io/badge/ansible--galaxy-iancleary.nodejs-blue.svg" alt="Ansible Galaxy">
+    <img src="https://img.shields.io/badge/ansible--galaxy-icancclearynow.nodejs-blue.svg" alt="Ansible Galaxy">
 </a>
 <a href="https://raw.githubusercontent.com/iancleary/ansible-role-nodejs/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
@@ -86,7 +86,7 @@ Including an example of how to use your role (for instance, with variables passe
 - hosts: servers
   user: unprivelaged
   roles:
-    - role: iancleary.nodejs
+    - role: icancclearynow.nodejs
       become: true
       npm_config_unsafe_perm: "true"
       nodejs_npm_global_packages:
@@ -101,7 +101,7 @@ Including an example of how to use your role (for instance, with variables passe
 - hosts: servers
   user: root
   roles:
-    - role: iancleary.nodejs
+    - role: icancclearynow.nodejs
       nodejs_npm_global_packages:
         # Install a specific version of a package.
         - name: jslint

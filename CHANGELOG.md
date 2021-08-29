@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2021-08-29
+
+### Changed
+
+- username from `iancleary` to `icancclearynow`
+
 ## [1.0.0] - 2021-08-12
 
 ### Added
@@ -35,7 +41,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - NPM package shorthand to handle idempotence
 
-[Unreleased]: https://github.com/iancleary/ansible-role-nodejs/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/iancleary/ansible-role-nodejs/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v2.0.0
 [1.0.0]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v1.0.0
 [0.1.1]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v0.1.1
 [0.1.0]: https://github.com/iancleary/ansible-role-nodejs/releases/tag/v0.1.0
