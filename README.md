@@ -3,17 +3,17 @@ ansible-role-nodejs
 
 <p align="center">
 
-<a href="https://github.com/icancclearynow/ansible-role-nodejs/actions?query=workflow%3Aci" target="_blank">
-    <img src="https://github.com/icancclearynow/ansible-role-nodejs/workflows/CI/badge.svg" alt="CI workflow status">
+<a href="https://github.com/iancleary/ansible-role-nodejs/actions?query=workflow%3Aci" target="_blank">
+    <img src="https://github.com/iancleary/ansible-role-nodejs/workflows/CI/badge.svg" alt="CI workflow status">
 </a>
 
-<a href="https://github.com/icancclearynow/ansible-role-nodejs/actions?query=workflow%3Arelease" target="_blank">
-    <img src="https://github.com/icancclearynow/ansible-role-nodejs/workflows/Release/badge.svg" alt="Release workflow status">
+<a href="https://github.com/iancleary/ansible-role-nodejs/actions?query=workflow%3Arelease" target="_blank">
+    <img src="https://github.com/iancleary/ansible-role-nodejs/workflows/Release/badge.svg" alt="Release workflow status">
 </a>
-<a href="https://galaxy.ansible.com/icancclearynow/nodejs" target="_blank">
-    <img src="https://img.shields.io/badge/ansible--galaxy-icancclearynow.nodejs-blue.svg" alt="Ansible Galaxy">
+<a href="https://galaxy.ansible.com/iancleary/nodejs" target="_blank">
+    <img src="https://img.shields.io/badge/ansible--galaxy-iancleary.nodejs-blue.svg" alt="Ansible Galaxy">
 </a>
-<a href="https://raw.githubusercontent.com/icancclearynow/ansible-role-nodejs/main/LICENSE" target="_blank">
+<a href="https://raw.githubusercontent.com/iancleary/ansible-role-nodejs/main/LICENSE" target="_blank">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License">
 </a>
 </p>
@@ -86,7 +86,7 @@ Including an example of how to use your role (for instance, with variables passe
 - hosts: servers
   user: unprivelaged
   roles:
-    - role: icancclearynow.nodejs
+    - role: iancleary.nodejs
       become: true
       npm_config_unsafe_perm: "true"
       nodejs_npm_global_packages:
@@ -101,7 +101,7 @@ Including an example of how to use your role (for instance, with variables passe
 - hosts: servers
   user: root
   roles:
-    - role: icancclearynow.nodejs
+    - role: iancleary.nodejs
       nodejs_npm_global_packages:
         # Install a specific version of a package.
         - name: jslint
@@ -118,6 +118,6 @@ License
 Author Information
 ------------------
 
-This role was created in 2021 by [Ian Cleary](https://icancclearynow.dev).
+This role was created in 2021 by [Ian Cleary](https://iancleary.me).
 
 Inspiration for the structure of this repo came from [Jeff Geerling](https://github.com/geerlingguy/ansible-role-nodejs).
