@@ -23,11 +23,7 @@ galaxy_info:
   platforms:
   - name: Ubuntu
     versions:
-    - bionic
     - focal
-  - name: Fedora
-    versions:
-    - 34
 
   galaxy_tags: ['system', 'development']
     # List tags for your role here, one per line. A tag is a keyword that describes
