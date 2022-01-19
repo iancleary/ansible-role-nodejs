@@ -13,7 +13,7 @@ name: Release
 
 defaults:
   run:
-    working-directory: 'icancclearynow.nodejs'
+    working-directory: 'iancleary.nodejs'
 
 jobs:
 
@@ -24,7 +24,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'icancclearynow.nodejs'
+          path: 'iancleary.nodejs'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2
